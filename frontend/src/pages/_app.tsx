@@ -1,9 +1,10 @@
+// tslint:disable-next-line:no-unused-variable
+import * as React from 'react';
 import NavBar from "@/components/navbar";
-import "@/styles/globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import type { AppProps } from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <div className="app-container">
       <main className="main-content">
@@ -15,3 +16,4 @@ export default function App({ Component, pageProps }: AppProps) {
     </div>
   );
 }
+export default App

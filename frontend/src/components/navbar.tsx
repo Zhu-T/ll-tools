@@ -59,7 +59,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     justifyContent: 'flex-end',
 }));
 
-export default function PersistentDrawerLeft() {
+function PersistentDrawerLeft() {
     const router = useRouter()
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -118,8 +118,8 @@ export default function PersistentDrawerLeft() {
                 <Divider />
                 <List>
                     {(Object.keys(pages)).map((page) => (
-                        <ListItem disablePadding>
-                            <ListItemButton key={page} onClick={() => navigate(page)}>
+                        <ListItem key={page} onClick={() => navigate(page)} disablePadding>
+                            <ListItemButton>
                                 <ListItemText primary={page} />
                             </ListItemButton>
                         </ListItem>
@@ -129,3 +129,5 @@ export default function PersistentDrawerLeft() {
         </Box>
     );
 }
+
+export default PersistentDrawerLeft;

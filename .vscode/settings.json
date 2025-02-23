@@ -1,7 +1,7 @@
 {
   "editor.codeActionsOnSave": {
-    "source.organizeImports": "explicit",
-    "source.removeUnusedImports": "explicit",
+    "source.organizeImports": "never",
+    "source.removeUnusedImports": "never",
     "source.addMissingImports.ts": "explicit"
   },
   "yaml.schemas": {

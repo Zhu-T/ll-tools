@@ -1,7 +1,7 @@
 {
   "name": "ll-tools",
   "displayName": "LL Tools",
-  "version": "1",
+  "version": "1.0.0",
   "description": "LL Tools",
   "private": false,
   "license": "MIT",
