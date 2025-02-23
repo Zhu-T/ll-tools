@@ -12,5 +12,6 @@
   "yaml.validate": true,
   "yaml.format.enable": true,
   "yaml.hover": true,
-  "yaml.completion": true
+  "yaml.completion": true,
+  "compile-hero.disable-compile-files-on-did-save-code": false
 }
