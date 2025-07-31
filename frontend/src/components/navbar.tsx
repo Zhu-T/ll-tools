@@ -18,8 +18,8 @@ import * as React from 'react';
 
 
 const pages = {
-    'Lease': '/ll-tools-formats/Lease',
-    'Test': '/ll-tools-formats/LeaseForm'
+    'Lease': '/ll-tools-formats/LeaseForm',
+    'Test': '/ll-tools-formats/Lease2'
 }
 
 const drawerWidth = 200;
