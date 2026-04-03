@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 // CSS Reload Trigger
 import { LeaseWizard } from "./components/LeaseWizard";
-import { LeaseTemplate } from "./components/LeaseTemplate";
+import { LeaseTemplate } from "./components/formats/LeaseTemplate";
 import { DocumentSelector, DocumentType } from "./components/DocumentSelector";
 import "./App.css";
 
