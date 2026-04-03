@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<style>
+p {
+    margin-right: 30px;
+    margin-left: 60px;
+    font-size: 13px;
+    word-wrap: break-word;
+    text-indent: -30px;
+}
+ol{
+    margin-right: 30px;
+    margin-left: 45px;
+    font-size: 13px;
+    vertical-align: top;
+}
+#foo {
+    position: relative;
+    margin-bottom: 2;
+    margin-left: 1;
+  }
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-weight: bold;
+    font-size: 14px;
+}
+textarea{
+    background: transparent;
+    border-style: none;
+    font-size: 13px;
+    height: 200px;
+    width: 650px;
+    resize: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+#wrapper {
+    position: relative;
+    overflow: auto;
+    margin: 40px;
+    border: 1px solid black;
+}
+li {
+    margin: 2.5px 0;
+}
+@media print {
+    .pagebreak {
+        clear: both;
+        page-break-after: always;
+    }
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: initial;
+    appearance: initial;
+    background: white;
+    width: 15px;
+    height: 15px;
+    border: solid black 1px;;
+    position: relative;
+    top: 5px;
+}
+input[type="checkbox"]:checked {
+    background: white;
+}
+input[type="checkbox"]:checked:after {
+    /* Heres your symbol replacement */
+    content: "X";
+    color:black;
+    /* The following positions my tick in the center, 
+     * but you could just overlay the entire box
+     * with a full after element with a background if you want to */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.container {
+  width: 100px;
+  border: 1px solid white;
+  position: relative;
+  overflow: hidden;
+}
+.container:before, .container textarea {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.container textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  display: block;
+  line-height: 1.2;
+}
+.container:before {
+  position: absolute;
+  content: "______________________________________________________________________________________________________________";
+  z-index: -1;
+  left: 25px;
+  top: 0;
+  width: 100%;
+  color: black;
+  line-height: 1.4;  
+}
+
+li#lead {
+  list-style-type: none;
+  margin: 2.5px 0;
+  font-weight:normal
+}
+
+li#lead:before {
+  content: '_____ ';
+}
+</style>
+<body>
+<div id="wrapper">
+    <h1 style="text-align: center;"><u>Residential Lease Agreement</u></h1>
+    <p><b style="font-size: 17px;">1. Parties: <br></b> This lease made on <input type="text" size="15" style="text-align: center; "> between the <b>LANDLORD:</b> <input type="text" size="25" style="text-align: center; ">, address: <input type="text" size="38" style="text-align: center; "> and the <b>TENANT(S):</b> <input type="text" size="35" style="text-align: center; "></p>
+    <p><b style="font-size: 17px;">2. Property: <br></b> The landlord agrees to rent to the tenant(s) the property described as: <input type="text" size="40" style="text-align: center; "> located in <input type="text" size="10" style="text-align: center; ">, Pennsylvania</p>
+    <p><b style="font-size: 17px;">3. Conditions: <br></b>
+    <ol type="A" style="margin-top: -12px;">
+        <li>The rent for the property is $<input type="text" size="5" style="text-align: center; "> per month. The <b>TENANT(S)</b> <b>must pay</b> the rent on the <input type="text" size="5" style="text-align: center; "> day of the month and deliver it to the <b>LANDLORD</b> at the above address.</li>
+        <li>If the <b>TENANT(S)</b> fails to pay the rent on the due date, the <b>LANDLORD</b> may end this lease. If the rent is more than <input type="text" value="5" size="5" style="text-align: center; "> days late, the <b>TENANT(S)</b> must pay a late fee of $<input type="text" size="5" value="50" style="text-align: center; "> and then another $<input type="text" value="10" size="5" style="text-align: center; "> for each additional day that the rent is late.</li>
+        <li>The term of this lease is <input type="text" size="8" style="text-align: center; "> beginning on <input type="text" size="15" style="text-align: center; "> and ending on <input type="text" size="15" style="text-align: center; ">. The total rent due for the full term of this lease is $<input type="text" size="5" style="text-align: center; "> In the event that the <b>TENANT(S)</b> should break this lease without written permission of the <b>LANDLORD</b>, the unpaid rent for the remainder of this lease will become immediately due and owing to the <b>LANDLORD</b>.</li>
+        <li>When the lease's term ends, it will automatically renew for a term of <input type="text" size="5" style="text-align: center; ">. If the landlord or <b>TENANT(S)</b> does not want to renew the lease, they must give the other <input type="text" size="5" value= "60" style="text-align: center; "> days written notice before the end of the term.</li>
+        <li>The <b>TENANT(S)</b> has checked the property and agrees that it is in clean and good condition and therefore accepts the property in a as-is condition. At the end of this lease, the <b>TENANT(S)</b> will return the property to the <b>LANDLORD</b> in the same clean and good condition.</li>
+        <li>The <b>TENANT(S)</b> will only use the property for residential purposes.</li>
+        <li>The <b>TENANT(S)</b> promise to pay the rent is separate from all other promises in this lease. The <b>TENANT(S)</b> agrees to pay the full rent each month. If the <b>LANDLORD</b> owes the <b>TENANT(S)</b> any money, the <b>TENANT(S)</b> agrees not to deduct it from the rent due or from and other money owed to the <b>LANDLORD</b>.</li>
+        <li><b style="font-size: 17px;">Security Deposit:</b></li>
+            <ol>
+                <li>The amount of the security deposit is $<input type="text" size="5" style="text-align: center; "></li>
+                <li>The <b>LANDLORD</b> cannot require the <b>TENANT(S)</b> to pay a security deposit that is more than (2) two months rent. After the first year, the landlord must reduce the security deposit to no more than (1) one months rent.</li>
+                <li>In the event that the security deposit paid by the <b>TENANT(S)</b> exceeds one (1) month's rent, the <b>TENANT(S)</b> agrees that, after one (1) year of tenancy, the second month's portion of the security deposit will be applied as payment for the last month's rent. This adjustment will occur automatically, and the <b>TENANT(S)</b> acknowledges that this portion of the security deposit will no longer be refundable at the end of the lease term.</li>
+                <li>The <b>TENANT(S)</b> cannot use the security deposit to pay rent without the written permission of the <b>LANDLORD</b>.</li>
+                <li>The <b>LANDLORD</b> can use the security deposit for unpaid rent and damages that are the <b>TENANT(S)</b> responsibility beyond normal wear and tear.</li>
+                <li>When the <b>TENANT(S)</b> moves out, the <b>LANDLORD</b>  will inspect the property and prepare a list of charges if there is any damage to the property or any unpaid rent. The <b>LANDLORD</b> can deduct these charges, if any, from the security deposit and will return the balance within (30) thirty days. The <b>TENANT(S)</b> must give the <b>LANDLORD</b> written notice of the <b>TENANT(S)</b> new address or make other arrangements with the <b>LANDLORD</b>  for the return of the security deposit.</li>
+            </ol>
+    </ol></p>
+    <p><b style="font-size: 17px;">4. Utilities: <br></b> The <b>TENANT(S)</b> agree to pay all utilities and/or services based upon occupancy of the premises except: <input type="text" size="60" style="text-align: center; "></p>    
+</div>
+<div id="foo"><b>Initial(s): _________</b></div>
+<div class="pagebreak"> </div>
+<div id="wrapper">
+    <p><b style="font-size: 17px;">5. Occupants: <br></b> Guest(s) staying over for more than <input type="text" size="2" value="7" style="text-align: center; "> days without the written consent of the <b>LANDLORD</b> shall be considered a breach of this agreement. <b>ONLY</b> the following individuals and/or animals, <b>AND NO OTHERS</b> shall occupy the subject residence for more than <input type="text" value="7" size="2" style="text-align: center; "> days unless the expressed written consent of the <b>LANDLORD</b> is obtained <input type="text" value="1" size="2" style="text-align: center; "> days in advance: <input type="text" size="60" style="text-align: center; "></p>
+    <p><b style="font-size: 17px;">6. Liquid Filled Furnishings: <br></b> No liquid filled furniture, receptacle containing more than ten gallons of liquid is permitted without prior written consent and meeting the requirements of the <b>LANDLORD</b>. The <b>TENANT(S)</b> also agrees to carry insurance deemed appropriate by the <b>LANDLORD</b> to cover possible losses that may be caused by such items.</p>
+    <p><b style="font-size: 17px;">7. Insurance: <br></b> The <b>TENANT(S)</b> acknowledges that the <b>LANDLORD'S</b> insurance <b>does not</b> cover personal property damage caused by fire, theft, rain, war, acts of God, acts of others, and/or any other causes, nor shall the <b>LANDLORD</b> be held liable for such losses. The <b>TENANT(S)</b> is hereby advised to obtain their own insurance policy to cover any personal losses.</p>
+    <p><b style="font-size: 17px;">8. Repairs: <br></b> The <b>TENANT(S)</b> will notify the <b>LANDLORD</b> promptly if any part of the property is damaged or destroyed. The <b>TENANT(S)</b> is/are responsible for any damage or destruction done to the property by their actions or negligence, or by the actions or negligence of their guests or family. The <b>TENANT(S)</b> must make all repairs and replacements to fix such damage or destruction. If the <b>TENANT(S)</b> fail to do so, the <b>LANDLORD</b> may do it and add the expense to the next month's rent.</p>
+    <p><b style="font-size: 17px;">9. Landlords Entry Onto Property: <br></b> The <b>LANDLORD</b> can enter the property at reasonable times on a (24) twenty-four hours notice to the <b>TENANT(S)</b>. The <b>LANDLORD</b> can enter the property to inspect it; make repairs, alterations or improvements; supply services; or, show the property to prospective buyers, lenders, contractors, insurers, or tenants. In <b>case of emergency</b>, the <b>LANDLORD can enter the property at any time without notice to the tenant</b>.</p>
+    <p><b style="font-size: 17px;">10. Tenant(s) Responsibilities: </b><br>All <b>TENANTS</b> and other people the <b>TENANT(S)</b> allow onto the property promise to:
+        <ol TYPE="A" style="margin-top: -12px;">
+            <li>Obey all local, state and federal laws.</li>
+            <li>Keep the property clean and safe.</li>
+            <li>Use all utilities, facilities and fixtures in a safe and reasonable way.</li>
+            <li>Promptly remove all trash and debris from the property as required by the <b>LANDLORD</b> and local ordinance.</li>
+            <li>Not deliberately or negligently destroy, deface, damage, or remove any part of the property or grounds.</li>
+            <li><b>Promptly</b> notify the <b>LANDLORD</b> of conditions that need repair.</li>
+            <li>Make no major changes to the property, such as changing any locks, painting, rebuilding, removing, repairing or improving without the <b>LANDLORD's</b> written consent. Alterations become the property of the <b>LANDLORD</b>. The tenant <b>cannot</b> remove improvements and the <b>LANDLORD</b> does not have to pay for any changes or improvements made by the <b>TENANT(S)</b>.</li>
+            <li>Agree not to install any external antennae, which call include buy not be limited to antenna for television, CB radio, FM reception, short-wave radio & satellite dish without prior written consent from the <b>LANDLORD</b>.</li>
+            <li>Not bring or keep pets onto the property without written approval by the <b>LANDLORD</b>.</li>
+            <li>Allow the <b>LANDLORD</b> to put up "for sale", "for rent" or other signs.</li>
+            <li>Move out of the property when the lease ends.</li>
+            <li>Keep nothing on the property that is highly flammable, dangerous or substantially increases the danger of fire or injury.</li>
+        </ol></p>
+</div>
+<div id="foo"><b>Initial(s): _________</b></div>
+<div class="pagebreak"> </div>
+<div id="wrapper">
+    <p><b style="font-size: 17px;">11. Landlord Rights: <br></b>
+    <ol type="A" style="margin-top: -12px;">
+        <li>The <b>TENANT(S)</b> waive the <u><b>Notice to Quit</b></u> otherwise required by law. This means that the <b>LANDLORD</b> may require the tenant to vacate and surrender the premises with 10 days prior notice if the <b>TENANT(S)</b> fail to follow the terms of the lease.</li>
+        <li>If the <b>TENANT(S)</b> fail to pay two month's rent, or the <b>TENANT(S)</b> break any other provision in this lease, the <b>LANDLORD</b> may end this lease with 10 days notice and file a lawsuit to evict the tenant.</li>
+        <li>Besides ending this lease and evicting the tenant, the <b>LANDLORD</b> can sue the <b>TENANT(S)</b> for unpaid rent, other damages, losses or injuries. If the <b>LANDLORD</b> gets a judgment for money against the tenant, the <b>LANDLORD</b> can use the court process to take your personal goods, furniture, motor vehicles and money in banks. The <b>LANDLORD</b> may also be able to attach your wages to recover money for damages done to the property.</li>
+        <li>The <b>LANDLORD</b> may recover reasonable legal fees and costs from the tenant for any legal actions relating to the payment of rent or the recovery of the property.</li>
+    </ol></p>
+    <p><b style="font-size: 17px;">12. Abandonment: </b><br>The property will be considered abandoned by the <b>TENANT(S)</b> if:
+    <ol type="A" style="margin-top: -12px;">
+        <li>The <b>TENANT(S)</b> give(s) the <b>LANDLORD</b> notice that he will not return to the property.</li>
+        <li>The <b>TENANT(S)</b> remove their personal belongings from the property, fails to pay the rent, and does not return for (15) fifteen days.</li>
+        <li>The <b>TENANT(S)</b> fails to pay the rent and does not return to the property for one month.</li>
+        <li>The <b>TENANT(S)</b> leaves personal belongings in the property after the end of the lease. *If the tenant abandons the property, the <b>LANDLORD</b> may enter and relet the property. In this case, the <b>LANDLORD</b> may also remove and dispose of any personal property left behind by the <b>TENANT(S)</b>.</li>
+    </ol></p>
+    <p><b style="font-size: 17px;">13. Tenant Transfer of Lease: <br></b> The <b>TENANT(S)</b> <b>cannot</b> lease the property to any other person or let any other person take over the their rights and duties under this lease, unless the landlord first gives written approval.</p>
+    <p><b style="font-size: 17px;">14. Priority of Lease & Sale of Property: <br></b>
+        <ol type="A" style="margin-top: -12px;"> 
+            <li>If the <b>LANDLORD</b> sells this property, the purchaser can end this lease. All mortgages that now or in the future affect the property have a priority over this lease.</li>
+            <li>If the landlord sells the property, he will give the <b>TENANT(S)</b> written notice stating the name, address and phone number of the new landlord and where and to whom to pay rent. The landlord must also inform the <b>TENANT(S)</b> whether the security deposit was transferred to the new landlord. If the <b>LANDLORD</b> does not transfer the security deposit, the <b>LANDLORD</b> must return it to the tenant as described in the lease.</li>
+        </ol></p>
+    <p><b style="font-size: 17px;">15. Report to Credit/Tenant Agencies: <br></b> You are hereby notified that a nonpayment, late payment or breach of any of the terms of this rental agreement may be submitted/reported to a credit and/or tenant reporting agency, and may create a negative credit record on your credit report.</p>
+    <p><b style="font-size: 17px;">16. Additional Clauses: </b><br><textarea>
+A) The Tenant(s) agrees to pay the first and last months rent along with the security deposit.
+B) The 1 person(s) on the lease are the only ones allowed to live on the property, and the Landlord must be contacted if any additional person(s) are to live on the premises. 
+C) If the lock is changed a copy must be given to the Landlord, if not provided the Landlord reserves the right to remove the lock.
+D) The Tenant(s) is meant to pay for all utilities listed under Section 4, along with any fees accrued by tickets/violations in which the Tenant(s) is at fault.</textarea></p>
+</div>
+<div id="foo"><b>Initial(s): _________</b></div>
+<div class="pagebreak"> </div>
+<div id="wrapper">
+    <p><b style="font-size: 17px;">17. LEAD-BASED PAINT DISCLOURES FOR PROPERTY BUILT BEFORE 1978:<br></b>
+    <ol type="A" style="margin-top: -12px;">
+        <input type="checkbox" id="Lead1" name="vehicle1">
+        <label style="font-size: 17px;" for="Lead1">Property was built in or after 1978. This paragraph does not apply.</label><br>
+        <input type="checkbox" id="Lead2" name="vehicle1">
+        <label style="font-size: 17px;" for="Lead2">Property was built before 1978. Landlord and Tenant must provide information in this paragraph.</label><br>
+    </ol></p>
+    <p style="margin-left: 120px; font-size: 17px"><b>Lead Warning Statement</b><br>
+    Housing built before 1978 may contain lead-based paint. Lead from paint, paint chips, and dust can pose
+    health hazards if not managed properly. Lead exposure is especially harmful to young children and pregnant
+    women. Before renting pre-1978 housing, lessors must disclose the presence of known lead-based paint and/or
+    lead-based paint hazards in the dwelling. Lessees must also receive a federally approved pamphlet on lead
+    poisoning prevention.
+    <p><b style="font-size: 17px;">
+        <ol TYPE="A" style="margin-top: -12px;">
+            <li>Landlord does not know of any lead-based paint or lead-based paint hazards on the Property unless stated below:</li>
+                <input type="checkbox" id="Lead3" name="vehicle1">
+                <label for="Lead3">Landlord knows that there is lead-based paint, or that there are lead-based paint hazards on the Property. 
+                    Landlord must explain what Landlord knows about the lead-based paint and hazards, 
+                    including how Landlord learned that it is there, where it is, and the conditions of 
+                    the painted walls, trim and other surfaces. Landlord must give Tenant any other 
+                    information Landlord has about the lead-based paint and lead-based pain hazards.</label>
+            <li>Landlord has no reports or records about lead-based paint or lead-based paint hazards on the Property unless stated below:</li>
+                <input type="checkbox" id="Lead4" name="vehicle1">
+                <label for="Lead4">Landlord has given Tenants all available records and reports about lead-based paint or lead-based paint hazards on the Property. List records and reports:</label>
+                <div class="container" style="width: 600px"><!--width controls size of line-->
+                    <textarea style="margin-left: 30px;height: 25px;"></textarea>
+                </div>
+            <li>Tenant Initial all that are true:</li>
+                <ul>
+                    <li id="lead">Tenant has received the pamphlet <i>Protect Your Family From Lead in Your Home.</i>.</li>
+                    <li id="lead">Tenant has read the information given by Landlord in 17(A) and (B) above</li>
+                    <li id="lead">Tenant has received all records and reports that Landlord listed in paragraph 17 (B) above, if any.</li>
+                </ul>
+            <li>Landlord and Tenant certify, by signing this Lease, that the information given is true to the best of their knowledge</li>
+        </ol></p>
+    </div>
+<div id="foo"><b>Initial(s): _________</b></div>
+<div class="pagebreak"> </div>
+<div id="wrapper">
+    <p><b style="font-size: 17px;">18. If Property Is Taken Over by City, State, or Government: </b> <br> If any part of the property is taken for public use, this lease will end on the date the Title to the property is transferred to a City, State, or Government Agency.</p>
+    <p><b style="font-size: 17px;">19. Entire Agreement: <br></b> It is agreed between the <b>LANDLORD</b> and <b>TENANT(S)</b> that this lease spells out all terms, agreements and understandings between <b>LANDLORD</b> and the <b>TENANT(S)</b> regarding the leased premises.</p>
+    <p><b style="font-size: 17px;">BY SIGNING THE LEASE BELOW, I AGREE THAT I HAVE READ AND UNDERSTAND ALL THE TERMS AND 
+        CONDITIONS OF IT AND I HAVE RECEIVED THE FOLLOWING:</b></p>
+        <ol type="1">
+            <li>A signed copy of this Lease</li>
+        </ol>
+    <p style="font-size: 22px;"> TENANT(S): ______________________________ DATE: ___________</p>
+    <p style="font-size: 22px;"> LANDLORD:  ______________________________ DATE: ___________</p>
+</div>
+</body>
+</html>

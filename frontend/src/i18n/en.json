@@ -1,0 +1,131 @@
+{
+  "common": {
+    "dashboard": "Dashboard",
+    "generate_documents": "Generate Documents",
+    "rent_payments": "Rent & Payments",
+    "property_events": "Property Events",
+    "manage_properties": "Manage Properties",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "generate_print": "Generate & Print",
+    "back_to_selector": "← Back to selector",
+    "cancel_to_dashboard": "Cancel and return to dashboard"
+  },
+  "dashboard": {
+    "active_leases": "Active Leases",
+    "payments_overdue": "Payments Overdue",
+    "upcoming_tax": "Upcoming Tax Due"
+  },
+  "selector": {
+    "select_type": "Select Document Type",
+    "generate_doc": "Generate Document",
+    "lease_title": "Residential Lease Agreement",
+    "lease_desc": "Standard multi-page lease agreement based on your template.",
+    "notice_quit_title": "Notice to Quit",
+    "notice_quit_desc": "Formal notice for lease violations or non-payment (Coming Soon).",
+    "rent_increase_title": "Rent Increase Notice",
+    "rent_increase_desc": "Notify tenants of upcoming changes to monthly rent (Coming Soon).",
+    "payment_receipt_title": "Payment Receipt",
+    "payment_receipt_desc": "Generate a formal receipt for a specific payment (Coming Soon)."
+  },
+  "wizard": {
+    "title": "Residential Lease Wizard",
+    "step_indicator": "Step {{step}} of 5",
+    "step1": {
+      "title": "Step 1: Parties & Property",
+      "agreement_date": "Agreement Date",
+      "landlord_name": "Landlord Name",
+      "landlord_name_placeholder": "Individual or LLC",
+      "landlord_address": "Landlord Mailing Address (for rent)",
+      "landlord_address_placeholder": "Address for rent delivery",
+      "tenant_names": "Tenant Name(s)",
+      "tenant_names_placeholder": "All adult tenants",
+      "property_address": "Property Address",
+      "property_address_placeholder": "123 Main St, Apt 1",
+      "property_city": "Property City (PA)",
+      "property_city_placeholder": "e.g. Philadelphia"
+    },
+    "step2": {
+      "title": "Step 2: Financials & Fees",
+      "monthly_rent": "Monthly Rent ($)",
+      "rent_due_day": "Rent Due Day",
+      "rent_due_placeholder": "1st",
+      "late_after": "Late After (Days)",
+      "initial_late_fee": "Initial Late Fee ($)",
+      "daily_late_fee": "Daily Late Fee ($)",
+      "security_deposit": "Security Deposit ($)"
+    },
+    "step3": {
+      "title": "Step 3: Lease Term",
+      "term_length": "Term Length",
+      "start_date": "Start Date",
+      "end_date": "End Date",
+      "total_term_rent": "Total Term Rent ($)",
+      "total_term_rent_placeholder": "Total for full term",
+      "renewal_period": "Renewal Period",
+      "notice_period": "Notice Period (Days)",
+      "units": {
+        "day": "day",
+        "days": "days",
+        "week": "week",
+        "weeks": "weeks",
+        "month": "month",
+        "months": "months",
+        "year": "year",
+        "years": "years"
+      }
+    },
+    "step4": {
+      "title": "Step 4: Utilities & Occupancy",
+      "excluded_utilities": "Excluded Utilities (Landlord Pays)",
+      "excluded_utilities_placeholder": "Trash, Water, etc.",
+      "guest_limit": "Guest Limit (Days)",
+      "consent_advance": "Consent Advance (Days)",
+      "permitted_occupants": "Permitted Residents/Animals",
+      "permitted_occupants_placeholder": "Names of non-signing residents",
+      "clauses_title": "Section 16: Additional Clauses",
+      "add_clause": "+ Add Clause"
+    },
+    "step5": {
+      "title": "Step 5: Compliance",
+      "pre1978_label": "Property was built before 1978 (Requires Lead Disclosure)",
+      "lead_knowledge": "Landlord has knowledge of lead hazards",
+      "lead_reports": "Landlord has lead inspection records/reports",
+      "reports_list": "List of Records/Reports provided to Tenant",
+      "reports_list_placeholder": "List reports here...",
+      "summary_note": "The signature date and signatures will be left blank for the physical signing."
+    },
+    "default_clauses": [
+      "The Tenant(s) agrees to pay the first and last months rent along with the security deposit.",
+      "The person(s) on the lease are the only ones allowed to live on the property, and the Landlord must be contacted if any additional person(s) are to live on the premises.",
+      "If the lock is changed a copy must be given to the Landlord, if not provided the Landlord reserves the right to remove the lock.",
+      "Tenant is responsible for all utilities listed under Section 4, along with any fees accrued by tickets/violations in which the Tenant(s) is at fault."
+    ]
+  },
+  "template": {
+    "dashboard_btn": "← Dashboard",
+    "print_btn": "Print Lease Agreement"
+  },
+  "rent": {
+    "title": "Rent & Payments",
+    "subtitle": "Rent Roll and Payment Tracking.",
+    "table": {
+      "property": "Property",
+      "tenant": "Tenant",
+      "rent": "Rent",
+      "due_date": "Due Date",
+      "status": "Status",
+      "pending": "Pending"
+    }
+  },
+  "events": {
+    "title": "Property Events",
+    "subtitle": "Tax deadlines, insurance renewals, and maintenance tracking.",
+    "due": "Due:"
+  },
+  "properties": {
+    "title": "Manage Properties",
+    "subtitle": "Add/Edit your property portfolio."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "common": {
+    "dashboard": "仪表板",
+    "generate_documents": "生成文档",
+    "rent_payments": "租金与付款",
+    "property_events": "物业事件",
+    "manage_properties": "管理物业",
+    "cancel": "取消",
+    "back": "返回",
+    "next": "下一步",
+    "generate_print": "生成并打印",
+    "back_to_selector": "← 返回选择器",
+    "cancel_to_dashboard": "取消并返回仪表板",
+    "language": "语言"
+  },
+  "dashboard": {
+    "active_leases": "有效租约",
+    "payments_overdue": "逾期付款",
+    "upcoming_tax": "即将到期的税款"
+  },
+  "selector": {
+    "select_type": "选择文档类型",
+    "generate_doc": "生成文档",
+    "lease_title": "住宅租赁协议",
+    "lease_desc": "基于您的模板的标准多页租赁协议。",
+    "notice_quit_title": "搬迁通知",
+    "notice_quit_desc": "针对违反租约或未付款的正式通知（即将推出）。",
+    "rent_increase_title": "租金上涨通知",
+    "rent_increase_desc": "通知租户即将进行的每月租金更改（即将推出）。",
+    "payment_receipt_title": "付款收据",
+    "payment_receipt_desc": "为特定付款生成正式收据（即将推出）。"
+  },
+  "wizard": {
+    "title": "住宅租赁助手",
+    "step_indicator": "第 {{step}} 步（共 5 步）",
+    "step1": {
+      "title": "第 1 步：当事人与物业",
+      "agreement_date": "协议日期",
+      "landlord_name": "房东姓名",
+      "landlord_name_placeholder": "个人或公司",
+      "landlord_address": "房东通讯地址（用于收取租金）",
+      "landlord_address_placeholder": "租金交付地址",
+      "tenant_names": "租户姓名",
+      "tenant_names_placeholder": "所有成年租户",
+      "property_address": "物业地址",
+      "property_address_placeholder": "街道地址和单元号",
+      "property_city": "物业城市 (PA)",
+      "property_city_placeholder": "例如：费城"
+    },
+    "step2": {
+      "title": "第 2 步：财务与费用",
+      "monthly_rent": "月租金 ($)",
+      "rent_due_day": "租金截止日",
+      "rent_due_placeholder": "1号",
+      "late_after": "逾期天数",
+      "initial_late_fee": "初始滞纳金 ($)",
+      "daily_late_fee": "每日滞纳金 ($)",
+      "security_deposit": "安全押金 ($)"
+    },
+    "step3": {
+      "title": "第 3 步：租赁期限",
+      "term_length": "租赁时长",
+      "start_date": "开始日期",
+      "end_date": "结束日期",
+      "total_term_rent": "总租金 ($)",
+      "total_term_rent_placeholder": "整个期限的总额",
+      "renewal_period": "续租期限",
+      "notice_period": "通知期限（天）",
+      "units": {
+        "day": "天",
+        "days": "天",
+        "week": "周",
+        "weeks": "周",
+        "month": "月",
+        "months": "月",
+        "year": "年",
+        "years": "年"
+      }
+    },
+    "step4": {
+      "title": "第 4 步：实用程序与占用",
+      "excluded_utilities": "不包含的实用程序（房东支付）",
+      "excluded_utilities_placeholder": "垃圾、水费等",
+      "guest_limit": "访客限制（天）",
+      "consent_advance": "提前同意（天）",
+      "permitted_occupants": "允许的居民/动物",
+      "permitted_occupants_placeholder": "未签署协议的居民姓名",
+      "clauses_title": "第 16 条：附加条款",
+      "add_clause": "+ 添加条款"
+    },
+    "step5": {
+      "title": "第 5 步：合规性",
+      "pre1978_label": "物业建于 1978 年之前（需要铅披露）",
+      "lead_knowledge": "房东了解铅危害",
+      "lead_reports": "房东有铅检测记录/报告",
+      "reports_list": "提供给租户的记录/报告列表",
+      "reports_list_placeholder": "在此列出报告...",
+      "summary_note": "签署日期和签名将留空，以便进行实体签署。"
+    },
+    "default_clauses": [
+      "租户同意支付第一个月和最后一个月的租金以及安全押金。",
+      "租约上的人是唯一被允许居住在物业中的人，如果有任何额外的人员居住在房屋内，必须联系房东。",
+      "如果更换了门锁，必须向房东提供一份副本，如果不提供，房东保留拆除门锁的权利。",
+      "租户负责第 4 条下列出的所有实用程序，以及因租户过错而产生的任何罚单/违规费用。"
+    ]
+  },
+  "template": {
+    "dashboard_btn": "← 仪表板",
+    "print_btn": "打印租赁协议"
+  },
+  "rent": {
+    "title": "租金与付款",
+    "subtitle": "租金名单和付款跟踪。",
+    "table": {
+      "property": "物业",
+      "tenant": "租户",
+      "rent": "租金",
+      "due_date": "截止日期",
+      "status": "状态",
+      "pending": "待定"
+    }
+  },
+  "events": {
+    "title": "物业事件",
+    "subtitle": "税收截止日期、保险续订和维护跟踪。",
+    "due": "截止日期："
+  },
+  "properties": {
+    "title": "管理物业",
+    "subtitle": "添加/编辑您的物业组合。"
+  }
+}

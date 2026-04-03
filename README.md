@@ -1,37 +1,107 @@
-# electronjs-with-nextjs
+# MyApp — Flask + React (TypeScript) + SQLite
 
-## Use
+A locally-running web app bundled as a single `.exe`.
 
-```sh
-git clone https://github.com/saulotarsobc/electron-next-ts.git;
-cd electron-next-ts;
-npm install;
-npm run dev;
+## Stack
+
+| Layer    | Technology                          |
+|----------|-------------------------------------|
+| Frontend | React 18 + TypeScript 5 + Vite      |
+| Backend  | Python + Flask                      |
+| Database | SQLite (single `.db` file on disk)  |
+| Bundler  | PyInstaller                         |
+
+---
+
+## Project Structure
+
+```
+myapp/
+├── backend/
+│   ├── app.py              # Flask API + SQLite logic
+│   ├── requirements.txt    # Python dependencies
+│   └── static/             # React build output (auto-generated, do not edit)
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── items.ts    # Typed API service layer
+│   │   ├── types/
+│   │   │   └── index.ts    # Shared TypeScript types
+│   │   ├── App.tsx         # Main React component
+│   │   ├── App.css         # Styles
+│   │   └── main.tsx        # React entry point
+│   ├── index.html
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+├── main.py                 # .exe entry point
+├── myapp.spec              # PyInstaller config
+├── build.py                # One-command build script
+└── README.md
 ```
 
-## Help
+---
 
-- [Electronjs - documentation](https://www.electronjs.org/pt/docs/latest/)
-- [Any Linux Target](https://www.electron.build/linux)
+## Prerequisites
 
-## NPM Commands
+- Python 3.11+
+- Node.js 18+
+- pip
 
-- `npm run dev`: Run Electron with development build.
-  - `npm run build:backend`: Build backend with TypeScript.
-  - `electron . --dev`: Run Electron with development build.
-- `npm run prebuild`: Remove build and dist directories.
-- `npm run build`: Build frontend and backend.
-  - `npm run build:frontend`: Build frontend with Next.js.
-  - `npm run build:backend`: Build backend with TypeScript.
-- `npm run postinstall`: Install dependencies for Electron.
-- `npm run dist`: Build and make a distribution package with Electron Builder.
+---
 
-## Git Commands
+## Development (hot reload)
 
-### Release
+**Terminal 1 — Backend:**
+```bash
+pip install -r backend/requirements.txt
+python backend/app.py
+# Flask on http://localhost:5000
+```
+
+**Terminal 2 — Frontend:**
+```bash
+cd frontend
+npm install
+npm run dev
+# Vite on http://localhost:5173 (proxies /api → Flask)
+```
+
+Open http://localhost:5173. Changes to `.tsx` files hot-reload instantly.
+
+Run the TypeScript compiler without building:
+```bash
+cd frontend && npm run typecheck
+```
+
+---
+
+## Build the .exe
 
 ```bash
-#! bash
-git tag "v$1"
-git push origin --tags
+pip install -r backend/requirements.txt
+python build.py
 ```
+
+Output: `dist/myapp.exe`
+
+- Fully self-contained — no Python or Node needed on the target machine
+- `database.db` is created next to the `.exe` on first run
+- Ship app updates by replacing the `.exe` — user data in `database.db` is untouched
+
+---
+
+## Extending the App
+
+### Add a new API route
+1. Add a route in `backend/app.py`
+2. Add the type + fetch call in `frontend/src/api/items.ts`
+3. Add the matching TypeScript type in `frontend/src/types/index.ts`
+
+### Add a database table
+Add a `CREATE TABLE IF NOT EXISTS` block in `init_db()` inside `backend/app.py`.
+
+### Add a custom app icon
+Replace `icon=None` in `myapp.spec` with `icon="icon.ico"` and place `icon.ico` in the project root.
